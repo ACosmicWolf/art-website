@@ -1,0 +1,132 @@
+{% extends "pages/layout.html" %} {% block title %}Arshita - Home{% endblock %}
+{% block navlinks %}
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-gray-700
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Home' %}"
+  >Home</a
+>
+
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    text-gray-900
+    bg-gray-200
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  " 
+  href="{% url 'About' %}"
+  >About</a
+>
+
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Portfolio' %}"
+  >Portfolio</a
+>
+
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Contact' %}"
+  >Contact</a
+>
+{% endblock %} {% block content %} {% load static %}
+
+<section class="min-h-screen flex justify-center  pb-40">
+  <div class="mt-20 w-8/12 lg\:w-6\/12">
+  <div class="mt-20">
+    <h1 class="font-extrabold text-5xl text-center">About Me</h1>
+    <div class="mt-20">
+      <p class="text-2xl">Hi!</p>
+      <br />
+      <br />
+      <p class="text-xl">
+        “I’m a self taught ambidextrous artist, I’ve always been fascinated by
+        the fact that people can easily express themselves without using words!
+        I vividly remember my first visit to a beach and falling in love with
+        the endless blues! I love how one colour blends into another and makes
+        the vibe of the painting all together different. My work for now is
+        mainly inspired from nature and the people around me!
+      </p>
+      <br />
+      <p class="text-xl">
+      <p class="text-xl">
+        The calm yet chaotic sound of the rain in the forest, the endless blues
+        of the sea and the desire to escape reality are the things which inspire
+        me. “
+      </p>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

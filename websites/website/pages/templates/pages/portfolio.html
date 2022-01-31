@@ -1,0 +1,132 @@
+{% extends "pages/layout.html" %} {% block title %}Arshita - Portfolio
+{%endblock %} {% block navlinks %}
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-gray-700
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Home' %}"
+  >Home</a
+>
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-gray-700
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'About' %}"
+  >About</a
+>
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    text-gray-900
+    bg-gray-200
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Portfolio' %}"
+  >Portfolio</a
+>
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Contact' %}"
+  >Contact</a
+>
+{% endblock %} {% block content %}
+
+<div style="min-height: 100vh" class="container mx-auto px-6" style="background-color: #d8dee9;">
+  <h3 class="text-gray-700 text-2xl font-bold text-center mb-10 p-20 " >My Work</h3>
+  <div
+    class="
+      grid
+      gap-6
+      grid-cols-1
+      sm:grid-cols-2
+      lg:grid-cols-3
+      xl:grid-cols-4
+      pb-20
+    "
+  >
+    {% for names in images %}
+
+    <div>
+      <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+        <div class="h-full w-full">
+          <img src="{{ names.art.url }}" alt="" />
+        </div>
+        <div class="px-5 py-3">
+          <h3 class="text-gray-700 uppercase">{{ names.name }}</h3>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,211 @@
+{% extends "pages/layout.html" %} {% block title %}Arshita - Contact 
+{% endblock %} {% block mycss %}
+
+<style>
+  body {
+    overflow: hidden;
+  }
+</style>
+{% endblock %} {% block navlinks %}
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-gray-700
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Home' %}"
+  >Home</a
+>
+
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'About' %}"
+  >About</a
+>
+
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    bg-transparent
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Portfolio' %}"
+  >Portfolio</a
+>
+
+<a
+  class="
+    px-4
+    py-2
+    mt-2
+    text-sm
+    font-semibold
+    text-gray-900
+    bg-gray-200
+    rounded-lg
+    dark-mode:bg-transparent
+    dark-mode:hover:bg-gray-600
+    dark-mode:focus:bg-gray-600
+    dark-mode:focus:text-white
+    dark-mode:hover:text-white
+    dark-mode:text-gray-200
+    md:mt-0 md:ml-4
+    hover:text-gray-900
+    focus:text-gray-900
+    hover:bg-gray-200
+    focus:bg-gray-200 focus:outline-none focus:shadow-outline
+  "
+  href="{% url 'Contact' %}"
+  >Contact</a
+>
+{% endblock %} {% block content %}
+
+<div class="p-10">
+  <p class="font-bold">{{ name }}</p>
+  <p class="text-sm">{{ message }}</p>
+</div>
+
+<div class="flex justify-center items-center w-screen h-screen">
+  <form class="container flex justify-center items-center w-full h-full" action="" method="post">
+    {% csrf_token %}
+    <div
+      class="
+        w-full
+        p-8
+        my-4
+        md:px-12
+        lg:w-9/12 lg:pl-20 lg:pr-40
+        mr-auto
+        rounded-2xl
+        shadow-2xl
+      "
+    >
+      <div class="flex justify-center">
+        <h1 class="font-bold uppercase text-5xl">
+          Contact Me
+        </h1>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 md:grid-cols-2 mt-5">
+        <input
+          class="
+            w-full
+            bg-gray-100
+            text-gray-900
+            mt-2
+            p-3
+            rounded-lg
+            focus:outline-none focus:shadow-outline
+          "
+          type="text"
+          name="name"
+          placeholder="Name*"
+          required
+        />
+        <input
+          class="
+            w-full
+            bg-gray-100
+            text-gray-900
+            mt-2
+            p-3
+            rounded-lg
+            focus:outline-none focus:shadow-outline
+          "
+          type="email"
+          name="email"
+          placeholder="Email*"
+          required
+        />
+      </div>
+
+      <div class="my-4">
+        <textarea
+          placeholder="Message*"
+          class="
+            w-full
+            h-32
+            bg-gray-100
+            text-gray-900
+            mt-2
+            p-3
+            rounded-lg
+            focus:outline-none focus:shadow-outline
+          "
+          name="message"
+          required
+        ></textarea>
+      </div>
+
+      <div class="my-2 w-1/2 lg:w-1/4">
+        <button
+          class="
+            uppercase
+            text-sm
+            font-bold
+            tracking-wide
+            bg-black
+            p-4
+            rounded-lg
+            w-full
+            focus:outline-none focus:shadow-outline
+          " style="background-color: #88c0d0; color: #3b4252;"
+          type="submit"
+        >
+          Send Message
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+{% endblock %}
