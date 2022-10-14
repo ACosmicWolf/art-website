@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% block title %}Arshita Mehta{% endblock %}</title>
+    <link href="{% static 'pages/styles.css' %}" rel="stylesheet" />
+    {% block head %} {% endblock %}
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Arshita Mehta</div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="links">
+        <div class="link" id="home"><a href="{% url 'home' %}">Home</a></div>
+        <div class="link" id="contact"><a href="">Contact</a></div>
+        <div class="link" id="portfolio">
+          <a href="{% url 'portfolio' %}">Portfolio</a>
+        </div>
+      </div>
+    </nav>
+    {% block body %} {% endblock %}
+
+    <script src="{% static 'pages/base.js' %}"></script>
+  </body>
+</html>

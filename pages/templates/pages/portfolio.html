@@ -1,0 +1,79 @@
+{% extends "pages/base.html" %} {% load static %} {% block head %}
+<link href="{% static 'pages/portfolio.css' %}" rel="stylesheet" />
+{% endblock %} {% block body %}
+
+<div class="container">
+  <div class="heading">
+    <h3>Paintings</h3>
+  </div>
+
+  <div class="box">
+    {% for i,comment in a %}
+    <div class="imgbox">
+      <img src="{{ i.art.url }}" class="zoomable" />
+      <div>
+        <p>{{ i.name }}</p>
+        <a class="comment-toggle">
+          <span class="bar"></span> <span class="bar1"></span
+        ></a>
+      </div>
+      <div class="comments">
+        {% for j in comment %}
+        <p class="comment">
+          <span class="commenters-name">{{ j.name }}</span>{{ j.comment }}
+          <span class="comment-date">{{ j.date }}</span>
+        </p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="box">
+    {% for i,comment in b %}
+    <div class="imgbox">
+      <img src="{{ i.art.url }}" class="zoomable" />
+      <div>
+        <p>{{ i.name }}</p>
+        <a class="comment-toggle">
+          <span class="bar"></span> <span class="bar1"></span
+        ></a>
+      </div>
+      <div class="comments">
+        {% for j in comment %}
+        <p class="comment">
+          <span class="commenters-name">{{ j.name }}</span>{{ j.comment }}
+          <span class="comment-date">{{ j.date }}</span>
+        </p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="box">
+    {% for i,comment in c %}
+    <div class="imgbox">
+      <img src="{{ i.art.url }}" class="zoomable" />
+      <div>
+        <p>{{ i.name }}</p>
+        <a class="comment-toggle">
+          <span class="bar"></span> <span class="bar1"></span
+        ></a>
+      </div>
+      <div class="comments">
+        {% for j in comment %}
+        <p class="comment">
+          <span class="commenters-name">{{ j.name }}</span>{{ j.comment }}
+          <span class="comment-date">{{ j.date }}</span>
+        </p>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/smooth-zoom@latest/dist/zoom.min.js"></script>
+<script src="{% static 'pages/portfolio.js' %}"></script>
+
+{% endblock %}
