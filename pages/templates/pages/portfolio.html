@@ -18,6 +18,13 @@
         ></a>
       </div>
       <div class="comments">
+        <form method="POST">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Name">
+          <textarea name="comment" id="comment" cols="8" rows="3" placeholder="Comment"></textarea>
+          <input type="text" style="display: none;" name="painting" value="{{ i.name }}">
+          <button type="submit">Submit</button>
+        </form>
         {% for j in comment %}
         <p class="comment">
           <span class="commenters-name">{{ j.name }}</span>{{ j.comment }}
@@ -40,6 +47,13 @@
         ></a>
       </div>
       <div class="comments">
+        <form method="POST">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Name">
+          <textarea name="comment" id="comment" cols="8" rows="3" placeholder="Comment"></textarea>
+          <input type="text" style="display: none;" name="painting" value="{{ i.name }}">
+          <button type="submit">Submit</button>
+        </form>
         {% for j in comment %}
         <p class="comment">
           <span class="commenters-name">{{ j.name }}</span>{{ j.comment }}
@@ -62,6 +76,13 @@
         ></a>
       </div>
       <div class="comments">
+        <form method="POST">
+          {% csrf_token %}
+          <input type="text" name="name" placeholder="Name">
+          <textarea name="comment" id="comment" cols="8" rows="3" placeholder="Comment"></textarea>
+          <input type="text" style="display: none;" name="painting" value="{{ i.name }}">
+          <button type="submit">Submit</button>
+        </form>
         {% for j in comment %}
         <p class="comment">
           <span class="commenters-name">{{ j.name }}</span>{{ j.comment }}
